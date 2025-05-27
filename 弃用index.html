@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="童年怀旧小游戏，扫雷，2048，打飞机，贪吃蛇，俄罗斯方块，找回童年记忆">
+    <meta name="keywords" content="童年,怀旧小游戏,扫雷,2048,打飞机,贪吃蛇,俄罗斯方块">
+    <link rel="icon" href="Universal_materials/title_icon.ico">
+    <title>童年怀旧小游戏</title>
+    <style>
+    #nav {
+    background-color: #2c3e50; /* 深蓝色背景 */
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+
+    #nav ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: center; /* 水平居中 */
+    }
+
+    #nav li {
+        margin: 0;
+        padding: 0;
+        position: relative;
+    }
+
+    #nav li a {
+        display: block;
+        color: #ecf0f1; /* 浅灰色文字 */
+        text-align: center;
+        padding: 15px 25px;
+        text-decoration: none;
+        font-family: 'Arial', sans-serif;
+        font-size: 16px;
+        font-weight: bold;
+        transition: all 0.3s ease;
+    }
+
+    #nav li.current a {
+        background-color: #3498db; /* 当前选中项蓝色背景 */
+        color: white;
+    }
+
+    #nav li a:hover {
+        background-color: #34495e; /* 悬停时深灰色背景 */
+        color: white;
+    }
+	#nav img {
+	    width: 30px; /* 设置图片宽度为100像素 */
+	    height: auto; /* 保持图片的原始宽高比 */
+		text-align: left;
+	}
+	#nav img:hover {
+	    transform: scale(1.2); /* 鼠标悬停时图片放大1.2倍 */
+	    transition: transform 0.3s ease; /* 添加过渡效果，使放大过程更平滑 */
+	}
+	/* 下拉菜单样式 */
+	#nav ul li ul {
+	    display: none;
+	    position: absolute;
+	    background-color: #2c3e50;
+	    min-width: 113px;
+	}
+	#nav ul li:hover ul {
+	    display: block;
+	}
+	#nav ul li ul li {
+	    width: 100%;
+	}
+	#nav ul li ul li a {
+	    width: 113px;
+	    margin: 0px;
+	    padding: 0px 0px 0px 8px;
+	    text-decoration: none;
+	    display: block;
+	    background: #2c3e50;
+	    line-height: 29px;
+	}
+	#main{
+		width: 100%;
+		height: auto;
+		float: left;
+		background-image: url('./photo/Doraemon.jpg');
+		background-repeat: no-repeat;
+		background-position: right center;
+		background-size: 400px auto;    
+		    
+	}
+	/*游戏部分*/
+	.section {
+	    width: 100%;
+	}
+	.title {
+	    text-align: center;
+	}
+	.product_list {
+	    list-style-type: none;
+	    display: grid;
+	    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* 根据容器宽度自动分配列，最小列宽200px */
+	    grid-gap: 20px; /* 网格间距 */
+	    padding: 0;
+	}
+	.product_list li {
+	    text-align: center;
+	}
+	.product_list img {
+	    width: 100%;
+	    height: auto;
+	}
+    </style>
+</head>
+<body>
+    <!-- Header Start -->
+    <div id="header">
+        <div class="wrapper">
+            <!-- <div id="logo"><a href="http://127.0.0.1:5500/testt.html"><img src="Universal_materials/title_icon.ico" alt="公司logo"></a></div> -->
+            <div id="nav">
+                    <ul>
+					<li><a href="index.html"><img src="./photo/title_icon.ico" alt="logo" /></a></li>
+						
+                    <li class="current"><a href="index.html">首页</a></li>
+                    <li><a href="product/">游戏中心</a>
+						<ul>
+							<li><a href="./games/game_2048.html">2048</a></li>
+							<li><a href="./games/game_minesweeper.html">扫雷</a></li>
+							<li><a href="./games/game_snake.html">贪吃蛇</a></li>
+							<li><a href="./games/game_flight_shooting.html">王凯打飞机</a></li>
+							<li><a href="./games/game_tetris.html">俄罗斯方块</a></li>
+						</ul>
+					</li>   
+                    <li><a href="aboutus/">关于我们</a>
+						<ul>
+							<li><a href="./Character/wk.html">王凯</a></li>
+							<li><a href="./Character/lxd.html">李旭东</a></li>
+							<li><a href="./Character/pjs.html">彭佳顺</a></li>
+						</ul>
+					</li>
+                    <li><a href="contact/">联系我们</a></li>
+                    </ul> 
+            </div>
+
+        </div>
+    </div>
+    <!-- Header End -->	
+    <!-- Banner Start -->
+    <div id="banner">
+        <div class="wrapper">
+            <div id="banner_content">
+                <h2>童年回忆 追忆时光</h2>
+                <a href="product/" class="btn">了解更多</a>
+            </div>
+        </div>
+    </div>
+    <!-- Banner End -->
+
+    <!-- Main Start -->
+    <div id="main">
+        <div class="wrapper">
+            <!-- 产品展示 -->
+            <div class="section" id="product">
+                <h3 class="title">游戏展示</h3>
+                <ul class="product_list">
+                    <li>
+                        <a href="./games/game_2048.html">
+                            <img src="./photo/2048.png" alt="2048">
+                            <p>2048</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="./games/game_minesweeper.html">
+                            <img src="./photo/saolei.jpg" alt="扫雷">
+                            <p>扫雷</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="./games/game_snake.html">
+                            <img src="" alt="产品3">
+                            <p>贪吃蛇</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="./games/game_flight_shooting.html">
+                            <img src="images/product4.jpg" alt="产品4">
+                            <p>王凯打飞机</p>
+                        </a>
+                    </li>
+					<li>
+					    <a href="./games/game_tetris.html">
+					        <img src="images/product5.jpg" alt="产品5">
+					        <p>俄罗斯方块</p>
+					    </a>
+					</li>
+                </ul>
+            </div>
+
+            <!-- 关于我们 -->
+            <div class="section" id="about">
+                <h3 class="title">关于我们</h3>
+                <div class="about_content">
+                    <p>我们是三人小队</p>
+                    <a href="aboutus/" class="more">了解更多</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Main End -->
+
+    <!-- Footer Start -->
+    <div id="footer">
+        <div class="wrapper">
+            <div class="footer_link">
+                <dl>
+                    <dt>联系我们</dt>
+                    <dd>电话：+86 15376697098</dd>
+                    <dd>邮箱：2986308865@qq.com</dd>
+                    <dd>地址：湖北省武汉市江夏区熊廷弼路特八号</dd>
+                </dl>
+            </div>
+            <!-- <div class="copyright">
+                <p>Copyright &copy; 2005-2025 公司名称 版权所有</p>
+                <p>京ICP备12345678号</p>
+            </div> -->
+        </div>
+    <!-- Footer End -->
+</body>
+</html>
