@@ -160,16 +160,16 @@
 
         document.addEventListener('keydown', (e) => {
             switch(e.key) {
-                case 'ArrowUp':
+                case 'w':
                     if (direction !== 'down') nextDirection = 'up';
                     break;
-                case 'ArrowDown':
+                case 's':
                     if (direction !== 'up') nextDirection = 'down';
                     break;
-                case 'ArrowLeft':
+                case 'a':
                     if (direction !== 'right') nextDirection = 'left';
                     break;
-                case 'ArrowRight':
+                case 'd':
                     if (direction !== 'left') nextDirection = 'right';
                     break;
             }

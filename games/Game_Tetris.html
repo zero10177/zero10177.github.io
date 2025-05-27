@@ -249,16 +249,16 @@
             if (!currentPiece || isPaused) return;
 
             switch(e.key) {
-                case 'ArrowLeft':
+                case 'a':
                     if (!currentPiece.collision(-1, 0)) currentPiece.x--;
                     break;
-                case 'ArrowRight':
+                case 'd':
                     if (!currentPiece.collision(1, 0)) currentPiece.x++;
                     break;
-                case 'ArrowDown':
+                case 's':
                     if (!currentPiece.collision(0, 1)) currentPiece.y++;
                     break;
-                case 'ArrowUp':
+                case 'w':
                     currentPiece.rotate();
                     break;
             }
