@@ -163,13 +163,37 @@
                 case 'w':
                     if (direction !== 'down') nextDirection = 'up';
                     break;
+                case 'W':
+                    if (direction !== 'down') nextDirection = 'up';
+                    break;
+                case 'ArrowUp':
+                    if (direction !== 'down') nextDirection = 'up';
+                    break;
                 case 's':
+                    if (direction !== 'up') nextDirection = 'down';
+                    break;
+                case 'S':
+                    if (direction !== 'up') nextDirection = 'down';
+                    break;
+                case 'ArrowDown':
                     if (direction !== 'up') nextDirection = 'down';
                     break;
                 case 'a':
                     if (direction !== 'right') nextDirection = 'left';
                     break;
+                case 'A':
+                    if (direction !== 'right') nextDirection = 'left';
+                    break;
+                case 'ArrowLeft':
+                    if (direction !== 'right') nextDirection = 'left';
+                    break;
                 case 'd':
+                    if (direction !== 'left') nextDirection = 'right';
+                    break;
+                case 'D':
+                    if (direction !== 'left') nextDirection = 'right';
+                    break;
+                case 'ArrowRight':
                     if (direction !== 'left') nextDirection = 'right';
                     break;
             }

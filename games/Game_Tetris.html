@@ -252,13 +252,37 @@
                 case 'a':
                     if (!currentPiece.collision(-1, 0)) currentPiece.x--;
                     break;
+                case 'A':
+                    if (!currentPiece.collision(-1, 0)) currentPiece.x--;
+                    break;
+                case 'ArrowLeft':
+                    if (!currentPiece.collision(-1, 0)) currentPiece.x--;
+                    break;
                 case 'd':
                     if (!currentPiece.collision(1, 0)) currentPiece.x++;
+                    break;
+                case 'D':
+                    if (!currentPiece.collision(1, 0)) currentPiece.x++;
+                    break;
+                case 'ArrowRight':
+                    if (!currentPiece.collision(1, 0)) currentPiece.x--;
                     break;
                 case 's':
                     if (!currentPiece.collision(0, 1)) currentPiece.y++;
                     break;
+                case 'S':
+                    if (!currentPiece.collision(0, 1)) currentPiece.y++;
+                    break;
+                case 'ArrowDown':
+                    if (!currentPiece.collision(0, 1)) currentPiece.y++;
+                    break;
                 case 'w':
+                    currentPiece.rotate();
+                    break;
+                case 'W':
+                    currentPiece.rotate();
+                    break;
+                case 'ArrowUp':
                     currentPiece.rotate();
                     break;
             }

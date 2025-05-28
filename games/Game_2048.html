@@ -130,7 +130,7 @@
     
     <!-- 游戏规则说明 -->
     <div id="game-rules">
-        <p>游戏规则：使用键盘字母（w(上)、x(下)、a(左)、d(右)）控制卡片移动，相同的卡片会合并成一个数值更大的卡片，目标是合并出数值为 2048 的卡片。</p>
+        <p>游戏规则：使用键盘字母 W(上)、S(下)、A(左)、D(右)）控制卡片移动，相同的卡片会合并成一个数值更大的卡片，目标是合并出数值为 2048 的卡片。</p>
     </div>
     <!-- 游戏图标数字含义
     <div id="materials_meanings">
@@ -393,13 +393,37 @@
                 case 'a':
                     moveLeft();
                     break;
+                case 'A':
+                    moveLeft();
+                    break;
+                case 'ArrowLeft':
+                    moveLeft();
+                    break;
                 case 'd':
+                    moveRight();
+                    break;
+                case 'D':
+                    moveRight();
+                    break;
+                case 'ArrowRight':
                     moveRight();
                     break;
                 case 'w':
                     moveUp();
                     break;
+                case 'W':
+                    moveUp();
+                    break;
+                case 'ArrowUp':
+                    moveUp();
+                    break;
                 case 's':
+                    moveDown();
+                    break;
+                case 'S':
+                    moveDown();
+                    break;
+                case 'ArrowDown':
                     moveDown();
                     break;
             }
