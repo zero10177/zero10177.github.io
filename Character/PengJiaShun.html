@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <link rel="icon" type="image/x-icon" href="../photo/title_icon.ico" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>极客破壁者｜彭佳顺</title>
+    <style>
+        :root {
+            --cyber-blue: #00ffff;
+            --matrix-green: #00ff88;
+            --neon-purple: #bc13fe;
+        }
+
+        body {
+            background: #1a1a2e;
+            color: rgba(255,255,255,0.9);
+            font-family: 'Consolas', 'Monaco', monospace;
+            line-height: 1.8;
+            margin: 0;
+            display: flex;
+            min-height: 100vh;
+        }
+
+        .cyber-border {
+            border: 3px solid;
+            border-image: linear-gradient(45deg, var(--cyber-blue), var(--neon-purple)) 1;
+            box-shadow: 0 0 20px rgba(0, 255, 255, 0.2);
+        }
+
+        .content-container {
+            flex: 1;
+            padding: 3rem;
+            max-width: 800px;
+            position: relative;
+            background: linear-gradient(45deg, #0f0f2b 30%, transparent 100%);
+        }
+
+        .portrait-container {
+            flex: 0 0 40%;
+            position: relative;
+            background: #0a0a1a;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .portrait {
+            width: 70%;
+            border-radius: 5px;
+            filter: grayscale(80%) contrast(120%);
+            transition: transform 0.3s;
+        }
+
+        .tech-keyword {
+            color: var(--matrix-green);
+            text-shadow: 0 0 10px currentColor;
+            position: relative;
+        }
+
+        .tech-keyword::after {
+            content: '>';
+            position: absolute;
+            right: -1.2em;
+            color: var(--cyber-blue);
+            animation: cursor-blink 1s infinite;
+        }
+
+        @keyframes cursor-blink {
+            0%, 100% { opacity: 0; }
+            50% { opacity: 1; }
+        }
+
+        @media (max-width: 768px) {
+            body {
+                flex-direction: column;
+            }
+            .portrait-container {
+                padding: 2rem 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="content-container cyber-border">
+        <h1 class="tech-keyword"># 极客破壁者协议 v3.14</h1>
+        
+        <section class="code-anatomy">
+            <h2>＞＞ 神经编译日志</h2>
+            <p>黑框眼镜持续接收VSCode光谱信号，视网膜投射AST语法树结构。<br>
+            <mark class="tech-keyword">Python λ函数</mark>正在解构教务系统API，<br>
+            TypeScript类型宇宙完成98.7%熵减优化。</p>
+        </section>
+
+        <section class="runtime-scene">
+            <h2>＞＞ 运行时环境</h2>
+            <p>树莓派集群在抽屉执行ORM心跳协议(interval=300ms)<br>
+            CSS悬停态粒子效果渲染中... <span class="loading">████▒▒ 75%</span><br>
+            Webpack构建路径已避开教导主任探测半径</p>
+        </section>
+
+        <div class="neon-button">git commit -m "突破教务系统防火墙"</div>
+    </div>
+
+    <div class="portrait-container">
+        <img src="../photo/pjs4.jpg" alt="极客肖像" class="portrait cyber-border">
+    </div>
+</body>
+</html>
